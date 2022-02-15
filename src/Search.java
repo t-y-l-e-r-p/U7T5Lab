@@ -7,6 +7,19 @@ public class Search {
     // should be accepted as parameters); return -1 if target is not found
     // BE SURE TO USE EARLY RETURN (more efficient)
 
+    public static int linearSearch(int num, int[] set){
+        boolean false1 = false;
+        for(int i = 0; i < set.length; i++ ){
+            if(set[i] == num){
+                false1 = true;
+            }
+            if(false1){
+                return i;
+            }
+        }
+        return -1;
+    }
+
 
 
 
@@ -15,6 +28,19 @@ public class Search {
     // instead of returning an index, it returns true if target is found or false
     // if target is not found
     // AGAIN, BE SURE TO USE EARLY RETURN
+
+    public static boolean linearSearch1(int num, int[] set){
+        boolean false2 = false;
+        for(int i = 0; i < set.length; i++ ){
+            if(set[i] == num){
+                return true;
+            }
+        }
+        return false2;
+    }
+
+
+
 
 
 
@@ -25,6 +51,19 @@ public class Search {
     // at which the target is found, or return -1 if target is not found
     // BE SURE TO USE EARLY RETURN
 
+    public static int linearSearch( ArrayList<Integer> set, int num){
+        boolean false1 = false;
+        for(int i = 0; i < set.size(); i++ ){
+            if(set.get(i) == num){
+                false1 = true;
+            }
+            if(false1){
+                return i;
+            }
+        }
+        return -1;
+    }
+
 
 
 
@@ -34,6 +73,19 @@ public class Search {
     // or return -1 if target is not found
     // BE SURE TO USE EARLY RETURN
 
+    public static int linearSearch( String[] set, String str){
+        boolean false1 = false;
+        for(int i = 0; i < set.length; i++ ){
+            if(set[i].contains(str)){
+                false1 = true;
+            }
+            if(false1){
+                return i;
+            }
+        }
+        return -1;
+    }
+
 
 
 
@@ -41,6 +93,23 @@ public class Search {
     // E. write a "linearSearchLast" method that accepts an array of ints and a
     // target int, and return the LAST index at which the target is found,
     // or return -1 if target is not found
+
+    public static int linearSearchLast(int[] set, int num){
+        int last=0;
+        for(int i = 0; i < set.length; i++){
+            if(set[i] == num){
+                last = i;
+            }
+        }
+        if(last != 0){
+            return last;
+        }
+        else{
+            return -1;
+        }
+    }
+
+
 
 
 
@@ -51,6 +120,25 @@ public class Search {
     // of Integers and a target int.  Each method should return the NUMBER OF TIMES
     // the target appears in the array/ArrayList.
 
+    public static int linearSearchCount(int[] set, int num){
+        int total = 0;
+        for(int i = 0; i < set.length; i++ ){
+            if(set[i] == num){
+                total++;
+            }
+        }
+        return total;
+    }
+
+    public static int linearSearchCount(ArrayList<Integer> set, int num){
+        int total = 0;
+        for(int i = 0; i < set.size(); i++ ){
+            if(set.get(i) == num){
+                total++;
+            }
+        }
+        return total;
+    }
 
 
 
